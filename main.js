@@ -1,5 +1,7 @@
 const d = new Date();
-d.setHours(10, 50);
+
+//hora a la que entramos 
+d.setHours(15, 55);
 const duracion_clase = 50;
 const duracion_pausas = 5;
 
@@ -14,7 +16,7 @@ const array = [
 
   ['4', 1, 1, 3, 3, 2],
   ['5', 1, 1, 3, 3, 4],
-  ['5', 1, 1, 3, 3, 4]
+  ['6', 1, 1, 3, 3, 4]
 ];
 
 
@@ -32,9 +34,10 @@ function minutes_with_leading_zeros(dt) {
 for (let i = 0; i < array.length; i++) {
 
   console.log(i);
+
   //Si es 4º hora (despues del recreo) añado 20 minutos
   if (i === 3) {
-    d.setMinutes(d.getMinutes() + 60);
+    d.setMinutes(d.getMinutes() + 20);
     //Añado los minutos de descanso
   } else {
     d.setMinutes(d.getMinutes() + duracion_pausas);
